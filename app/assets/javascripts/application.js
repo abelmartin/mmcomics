@@ -11,5 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+//= require underscore-min
+//= require backbone
+//= require mmc
 //= require_tree .

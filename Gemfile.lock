@@ -84,6 +84,8 @@ GEM
     ffaker (2.0.0)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
+    haml (4.0.6)
+      tilt
     i18n (0.7.0)
     informant-rails (0.8.0)
       rails (>= 3.0.0, < 4.3.0)
@@ -217,6 +219,7 @@ DEPENDENCIES
   dotenv-rails
   factory_girl_rails
   ffaker (~> 2.0)
+  haml
   informant-rails
   jquery-rails
   meta_request
