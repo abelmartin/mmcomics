@@ -6,13 +6,9 @@ class MMC.Collections.Characters extends Backbone.Collection
     else
       "#{MMC.apiRoot}/characters?apikey=#{MMC.apiKey}"
 
-  defaults:
-    name: null
-    offset: 0
-
   initialize: (models, options={}) ->
-    @name = options.name if options.hasOwnProperty('name')
-    @offset = options.offset if options.hasOwnProperty('offset')
+    @name = options.name
+    @offset = options.offset
 
   parse: (response) ->
     if response.code == 200
