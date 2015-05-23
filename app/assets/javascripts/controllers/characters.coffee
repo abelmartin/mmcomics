@@ -1,5 +1,5 @@
 MMC.Collections ?= {}
-MMC.Collections.Characters = Backbone.Collection.extend
+class MMC.Collections.Characters extends Backbone.Collection
   url: ->
     if @name
       "#{MMC.apiRoot}/characters?apikey=#{MMC.apiKey}&name=#{@name}"
