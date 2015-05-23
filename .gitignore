@@ -11,3 +11,9 @@
 /log/*
 !/log/.keep
 /tmp
+
+# Ignore the local env file
+/.env
+
+*.DS_Store
+*.dump
