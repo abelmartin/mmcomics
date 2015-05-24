@@ -17,3 +17,4 @@
 //= require react-jsx
 //= require mmc
 //= require_tree .
+//= require bootstrap-sprockets

@@ -1,0 +1,14 @@
+!!! 5
+%html
+  %head
+    %title My Marvel Comics
+    = stylesheet_link_tag    'application', media: 'all'
+    = csrf_meta_tags
+  %body{role: 'document'}
+    %nav#navigation.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          %a.navbar-brand{href: '#'}My Marvel Comics
+    #main-content.container.theme-showcase{role: 'main'}
+      = yield
+    = javascript_include_tag 'application'
