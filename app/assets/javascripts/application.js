@@ -12,9 +12,8 @@
 //
 //= require jquery
 //= require underscore-min
-//= require backbone
+//= require backbone-min
 //= require react
-//= require react-jsx
 //= require mmc
 //= require_tree .
 //= require bootstrap-sprockets
