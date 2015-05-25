@@ -1,4 +1,3 @@
-MMC.Collections ?= {}
 class MMC.Collections.Characters extends Backbone.Collection
   url: ->
     if @name
@@ -15,3 +14,5 @@ class MMC.Collections.Characters extends Backbone.Collection
       response.data.results
     else
       []
+
+  # sync: (method, model, options) ->

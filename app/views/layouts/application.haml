@@ -12,3 +12,8 @@
     #main-content.container.theme-showcase{role: 'main'}
       = yield
     = javascript_include_tag 'application'
+    :javascript
+      React.render(
+        <MMC.Components.Search />,
+        document.getElementById('search-container')
+      );
