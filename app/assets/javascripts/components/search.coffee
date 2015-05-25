@@ -1,9 +1,11 @@
+{div, h3, input, button} = React.DOM
+
 MMC.Components.Search = React.createClass
   handleClick: (event)-> console.log 'CLICKED!'
   render: ->
-    React.createElement 'div', {id: 'marvel-search-control', className: "panel panel-primary"},
-      React.createElement 'div', {className:"panel-heading"},
-        React.createElement 'h3', {className:"panel-title"}, 'Find Heroes By Name'
-      React.createElement 'div', {className:"panel-body"},
-        React.createElement 'input', {id:'search-field', type:'text'}
-        React.createElement 'button', {id:'search-button', onClick: @handleClick}, 'Search Marvel API'
+    div {id: 'marvel-search-control', className: "panel panel-primary"},
+      div {className:"panel-heading"},
+        h3 {className:"panel-title"}, 'Find Heroes By Name'
+      div {className:"panel-body"},
+        input {id:'search-field', type:'text'}
+        button {id:'search-button', onClick: @handleClick}, 'Search Marvel API'
