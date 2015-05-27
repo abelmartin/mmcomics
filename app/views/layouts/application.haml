@@ -12,8 +12,7 @@
     #main-content.container.theme-showcase{role: 'main'}
       = yield
     = javascript_include_tag 'application'
-    :javascript
-      React.render(
-        (new MMC.Components.Search).render(),
-        document.getElementById('search-container')
-      );
+    :coffeescript
+      $ ->
+        search = new MMC.Components.Search()
+        React.render search.render(), document.getElementById('search')
