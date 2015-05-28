@@ -1,4 +1,7 @@
 class MMC.Collections.Characters extends Backbone.Collection
+  #This is odd, but I NEEDED to use the function here.
+  model: (attrs, options) -> new MMC.Models.Hero(attrs, options)
+
   url: ->
     if @name
       "#{MMC.apiRoot}/characters?apikey=#{MMC.apiKey}&name=#{@name}"

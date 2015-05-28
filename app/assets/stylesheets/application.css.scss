@@ -21,3 +21,25 @@ body {
 .theme-showcase .navbar .container {
   width: auto;
 }
+
+.hero {
+  padding: 10px;
+  border: solid 1px #aaa;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.hero-avatar {
+  height: 75px;
+  width: 75px;
+  margin-right: 15px;
+}
+
+.hero-name, .hero-avatar {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hero-heading {
+  display: table;
+}
