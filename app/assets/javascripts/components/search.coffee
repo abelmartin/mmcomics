@@ -16,7 +16,11 @@ MMC.Components.Search = React.createClass
         available: 2099
     new MMC.Collections.Characters([spidey], {name: 'Spider-Man'})
 
+  onSearchSubmitted: (name) ->
+    success = (collection, response, options) -> console.dir collection
+    @state.name = name
+    @state.fetch success: success
   render: ->
     div {},
-      React.createElement(MMC.Components.SearchForm, {searchText: @state.name})
+      React.createElement(MMC.Components.SearchForm, {searchText: @state.name, callback: @onSearchSubmitted})
       React.createElement(MMC.Components.SearchResults, {results: @state.models})

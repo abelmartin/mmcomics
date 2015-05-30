@@ -4,7 +4,7 @@ MMC.Components.SearchResult = React.createClass
   render: ->
     avatarURL = "#{@props.thumbnail.path}.#{@props.thumbnail.extension}"
 
-    div {className: "hero", key: @props.id},
+    div {className: "hero"},
       div {className: 'hero-heading'},
         img {className: 'hero-avatar', src: avatarURL}
         h2 {className: 'hero-name'}, @props.name
