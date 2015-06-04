@@ -4,3 +4,9 @@
 #search
   #search-container
   #results-container
+
+- content_for :footer do
+  :coffeescript
+    $ ->
+      search = new MMC.Components.Search()
+      React.render search.render(), document.getElementById('search')
