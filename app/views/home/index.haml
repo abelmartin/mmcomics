@@ -8,5 +8,4 @@
 - content_for :footer do
   :coffeescript
     $ ->
-      search = new MMC.Components.Search()
-      React.render search.render(), document.getElementById('search')
+      React.render React.createElement(MMC.Components.Search, {}), document.getElementById('search')

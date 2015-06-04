@@ -1,7 +1,8 @@
-{div, h2, ul, li, img} = React.DOM
+{a, div, h2, ul, li, img} = React.DOM
 
 MMC.Components.SearchResult = React.createClass
   render: ->
+    # debugger
     avatarURL = "#{@props.thumbnail.path}.#{@props.thumbnail.extension}"
 
     div {className: "hero"},
@@ -12,3 +13,6 @@ MMC.Components.SearchResult = React.createClass
         li {className: 'comics'}, "comics count: #{@props.comics.available}"
         li {className: 'series'}, "series count: #{@props.series.available}"
         li {className: 'stories'}, "stories count: #{@props.stories.available}"
+        li {className: 'wiki'},
+          'Wiki:  ',
+          a {href: @props.urls[0].url}, @props.urls[0].url

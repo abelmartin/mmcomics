@@ -2,7 +2,7 @@
 
 MMC.Components.SearchResults = React.createClass
   render: ->
-    heroes = []
-    @props.results.forEach (hero) ->
-      heroes.push React.createElement(MMC.Components.SearchResult, hero.attributes)
-    div {id: "heroes"}, heroes
+    heroComponents = []
+    @props.collection.each (hero) ->
+      heroComponents.push React.createElement(MMC.Components.SearchResult, hero.attributes)
+    div {className: "hero-components"}, heroComponents

@@ -1,6 +1,7 @@
 {div} = React.DOM
 
 MMC.Components.Search = React.createClass
+
   getInitialState: ->
     spidey =
       id: 1009610
@@ -14,13 +15,19 @@ MMC.Components.Search = React.createClass
         available: 2099
       stories:
         available: 2099
-    new MMC.Collections.Characters([spidey], {name: 'Spider-Man'})
+      urls: [{url: 'http://google.com'}]
+
+    collection: new MMC.Collections.Characters([spidey], {name: 'Spider-Man'})
+
+  componentDidMount: ->
+    @state.collection.on 'sync', => @forceUpdate()
 
   onSearchSubmitted: (name) ->
     success = (collection, response, options) -> console.dir collection
     @state.name = name
-    @state.fetch success: success
+    @state.collection.fetch success: success
+
   render: ->
-    div {},
-      React.createElement(MMC.Components.SearchForm, {searchText: @state.name, callback: @onSearchSubmitted})
-      React.createElement(MMC.Components.SearchResults, {results: @state.models})
+    div {id: 'search-component'},
+      React.createElement(MMC.Components.SearchForm, {id: 'search-form-component', searchText: @state.collection.name, callback: @onSearchSubmitted})
+      React.createElement(MMC.Components.SearchResults, {id: 'search-results-component', collection: @state.collection})
