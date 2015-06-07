@@ -4,7 +4,7 @@ class MMC.Collections.Characters extends Backbone.Collection
 
   url: ->
     if @name
-      "#{MMC.apiRoot}/characters?apikey=#{MMC.apiKey}&name=#{@name}"
+      "#{MMC.apiRoot}/characters?apikey=#{MMC.apiKey}&nameStartsWith=#{@name}"
     else
       "#{MMC.apiRoot}/characters?apikey=#{MMC.apiKey}"
 
